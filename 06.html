@@ -10,11 +10,25 @@
     */
 
     //ENTRADA
+    const idadeCae = Number(prompt(`Informe a idade do seu cãe:`));
+    const porte = prompt(`Informe o porte do seu cãe: <br>
+     cães de porte pequeno (PEQUENO)
+     - cães de porte médio (MÉDIO)
+     - cães grandes (GRANDE)`).toUpperCase()
 
 
     //PROCESSAMENTO
+    let idadePequeno = idadeCae*5;
+    let idadeMedio = idadeCae*6;
+    let idadeGrande = idadeCae*7;
+    let idadeReal = "";
 
+    (porte=="PEQUENO")?idadeReal=`Seu cãe tem ${idadePequeno} anos, conforme a idade humana.`:
+    (porte=="MEDIO"|| porte=="MÉDIO")?idadeReal=`Seu cãe tem ${idadeMedio} anos, conforme a idade humana.`:
+    (porte=="GRANDE")?idadeReal=`Seu cãe tem ${idadeGrande} anos, conforme a idade humana.`:
+    idadeReal=`Informe um porte válido`;
     
     //SAÍDA
+    document.write(idadeReal)
 
 </script>

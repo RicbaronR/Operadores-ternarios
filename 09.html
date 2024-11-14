@@ -10,11 +10,19 @@
     */
 
     //ENTRADA
+    const horasSemanais = Number(prompt(`Informe as horas trabalhadas semanalmente:`).replace(",", "."));
+    const salarioHora = Number(prompt(`Informe quanto você recebe por hora trabalhada:`).replace(",", "."));
 
 
     //PROCESSAMENTO
+    let salarioSemAumentos = horasSemanais*salarioHora;
+    let mensagem="";
 
+    (horasSemanais<=45)?mensagem=`Você receberá um salário de R$${salarioSemAumentos.toFixed(2).replace(".", ",")}, sem adicionais. Recebendo R$${salarioHora.toFixed(2).replace(".", ",")} por hora trabalhada.`:
+    (horasSemanais<=60)?mensagem=`Você receberá um salário de R$${(salarioSemAumentos*1.20).toFixed(2).replace(".", ",")}, com um adicional de 20%. Ou seja, você receberá R$${((salarioSemAumentos*1.20)/horasSemanais).toFixed(2).replace(".", ",")} por hora trabalhada.`:
+    (horasSemanais>60)?mensagem=`Você receberá um salário de R$${(salarioSemAumentos*1.30).toFixed(2).replace(".", ",")}, com um adicional de 30%. Ou seja, você receberá R$${((salarioSemAumentos*1.30)/horasSemanais).toFixed(2).replace(".", ",")} por hora trabalhada.`:mensagem=`Algo deu errado!`;
     
     //SAÍDA
+    document.write(mensagem);
 
 </script>

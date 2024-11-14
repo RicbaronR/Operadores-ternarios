@@ -18,9 +18,14 @@
     let aumento15 = precoProduto*1.15;
     let aumento10 = precoProduto*1.10;
     let aumento5 = precoProduto*1.05;
+    let novoPreco = "";
 
-    
+    (precoProduto<=280)?novoPreco=`Após o aumento de 20% sobre o preço inicial do produto, você deverá pagar R$${aumento20.toFixed(2).replace(".", ",")}.`
+    :(precoProduto<=700)?novoPreco=`Após o aumento de 15% sobre o preço inicial do produto, você deverá pagar R$${aumento15.toFixed(2).replace(".", ",")}.`
+    :(precoProduto<=1500)?novoPreco=`Após o aumento de 10% sobre o preço inicial do produto, você deverá pagar R$${aumento10.toFixed(2).replace(".", ",")}.`
+    :novoPreco=`Após o aumento de 5% sobre o preço inicial do produto, você deverá pagar R$${aumento5.toFixed(2).replace(".", ",")}.`
     
     //SAÍDA
+    document.write(novoPreco);
 
 </script>

@@ -25,7 +25,7 @@
     let divida = gastos-salario;
     let mensagem="";
 
-    (gastos>salario)?mensagem=`Para poder pagar todas as suas contas faltou R$${divida.toFixed(2).replace(".", ",")}.`:mensagem=`Após pagar suas contas, sobraram R$${sobra.toFixed(2).replace(".", ",")} do seu salário.`
+    (gastos>salario)?mensagem=`Para poder pagar todas as suas contas faltaram/faltou R$${divida.toFixed(2).replace(".", ",")}.`:mensagem=`Após pagar suas contas, sobraram/sobrou R$${sobra.toFixed(2).replace(".", ",")} do seu salário.`
     
     //SAÍDA
     document.write(mensagem);

@@ -10,7 +10,9 @@
 
     //PROCESSAMENTO
     let mensagemFinal = "";
-    (anoNasci <= 2008)?mensagemFinal=`Você poderá votar no ano atual!`:mensagemFinal=`Você não poderá votar ainda!`;
+
+    const anosFaltantes = 16 - (2024-anoNasci);
+    (anoNasci <= 2008)?mensagemFinal=`Você poderá votar no ano atual!`:mensagemFinal=`Você não poderá votar ainda! Faltam ${anosFaltantes} ano(s).`;
     //tentar inserir anos faltantes.
     
     //SAÍDA

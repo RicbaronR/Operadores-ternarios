@@ -19,7 +19,8 @@
     let mensagem = "";
 
     (valorTransporte1>valorTransporte2)?mensagem=`O meio de transporte mais barato é o Transporte Público, custando R$${valorTransporte2} para se locomover diariamente.`
-    :(valorTransporte1<valorTransporte2)?mensagem=`O meio de transporte mais barato é o seu veículo, custando R$${valorTransporte1} para se locomover diariamente.`:mensagem=`Algo informado está errado!`;
+    :(valorTransporte1<valorTransporte2)?mensagem=`O meio de transporte mais barato é o seu veículo, custando R$${valorTransporte1} para se locomover diariamente.`
+    :mensagem=`O preço dos dois coincidem, então é preferível usar o meio de transporte que seja mais agradável para você.`;
 
 
     
